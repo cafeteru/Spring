@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Ejemplo de Variables en Spring</title>
+</head>
+<body>
+<main>
+    <table>
+        <tr>
+            <th>Firstname</th>
+            <th>Lastname</th>
+            <th>Age</th>
+        </tr>
+        <tr th:each="person : ${people}">
+            <td th:text="${person.name}">Jill</td>
+            <td th:text="${person.subname}">Smith</td>
+            <td th:text="${person.age}">50</td>
+        </tr>
+    </table>
+</main>
+</body>
+</html>
