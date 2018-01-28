@@ -7,18 +7,18 @@ import org.springframework.web.servlet.ModelAndView;
 
 @Controller
 public class InserccionSimple {
-	private final String WEB = "variable";
+    private final String WEB = "variable";
 
-	@GetMapping("/html")
-	public String variable(Model model) {
-		model.addAttribute("name", "Iván sin modelo");
-		return WEB;
-	}
+    @GetMapping("/html")
+    public String variable(Model model) {
+        model.addAttribute("name", "Iván sin modelo");
+        return WEB;
+    }
 
-	@GetMapping("/htmlMAV")
-	public ModelAndView variableMAV() {
-		ModelAndView v = new ModelAndView(WEB);
-		v.addObject("name", "Iván con modelo");
-		return v;
-	}
+    @GetMapping("/htmlMAV")
+    public ModelAndView variableMAV() {
+        ModelAndView v = new ModelAndView(WEB);
+        v.addObject("name", "Iván con modelo");
+        return v;
+    }
 }
